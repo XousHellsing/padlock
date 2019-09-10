@@ -1,6 +1,5 @@
 import os
 import time
-import numpy as np
 import random
 vec=[]
 lock=0
@@ -24,7 +23,8 @@ def multiF(lock):
 	b=1
 	if lock==0:
 		time.sleep(4)
-		b=np.prod(vec)
+		for y in range(0,10):
+			b=b*vec[y]
 		print(b)
 	else:
 		print("ocupado m")
@@ -44,6 +44,8 @@ def padlock(lock):
 		pad=input()
 	else:
 		print("bye")
+
+
 
 
 
